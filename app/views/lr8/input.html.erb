@@ -1,2 +1,11 @@
 <h1>Lr8#input</h1>
-<p>Find me in app/views/lr8/input.html.erb</p>
+
+
+<%= form_with url: "/lr8/output", method: :get do |form| %>
+    <%= form.label :amount, "Количество элементов:" %>
+    <%= form.text_field :amount %> </br>
+    <%= form.label :array, "Массив:" %>
+    <%= form.text_field :array %>
+    <%= form.submit "Отправить" %>
+  <% end %>
+  
